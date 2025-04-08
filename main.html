@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Comandos da Live</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cor-primaria: #29445E;
+      --cor-clara: #1c2c3a;
+      --cor-hover: #3b627d;
+      --cor-fundo: #0f1a23;
+      --cor-texto: #e0e6ed;
+      --bordas: 1px solid #3e5b72;
+    }
+
+    body {
+      font-family: 'Comfortaa', sans-serif;
+      background: var(--cor-fundo);
+      margin: 0;
+      padding: 40px;
+      color: var(--cor-texto);
+    }
+
+    .tabs {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 10px;
+    }
+
+    .tabs label {
+      padding: 10px 20px;
+      background: var(--cor-primaria);
+      color: white;
+      border-radius: 10px 10px 0 0;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .tabs label:hover {
+      background: var(--cor-hover);
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .content {
+      background: var(--cor-clara);
+      padding: 20px;
+      border-radius: 0 10px 10px 10px;
+      border: var(--bordas);
+      display: none;
+    }
+
+    input#aba1:checked ~ .conteudo1,
+    input#aba2:checked ~ .conteudo2,
+    input#aba3:checked ~ .conteudo3,
+    input#aba4:checked ~ .conteudo4 {
+      display: block;
+    }
+
+    input#aba1:checked ~ .tabs label[for="aba1"],
+    input#aba2:checked ~ .tabs label[for="aba2"],
+    input#aba3:checked ~ .tabs label[for="aba3"],
+    input#aba4:checked ~ .tabs label[for="aba4"] {
+      background: var(--cor-clara);
+      color: var(--cor-texto);
+      font-weight: bold;
+    }
+
+    .comando {
+      margin-bottom: 15px;
+    }
+
+    .comando strong {
+      font-size: 1.1em;
+      color: #a3d4ff;
+    }
+
+    .alias {
+      font-size: 0.9em;
+      color: #88a2b5;
+    }
+
+    .descricao {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-size: 0.95em;
+    }
+
+    .uso {
+        margin-top: 5px;
+        font-size: 0.9em;
+        color: #88a2b5
+    }
+
+  </style>
+</head>
+<body>
+
+  <input type="radio" name="tab" id="aba1" checked>
+  <input type="radio" name="tab" id="aba2">
+  <input type="radio" name="tab" id="aba3">
+  <input type="radio" name="tab" id="aba4">
+
+  <div class="tabs">
+    <label for="aba1">Comandos</label>
+    <label for="aba2">Sons</label>
+    <label for="aba3">Moderadores</label>
+    <label for="aba4">Extra</label>
+  </div>
+
+  <div class="content conteudo1">
+    <div class="comando">
+      <strong>!oi</strong>
+      <div class="descricao">Olá!</div>
+    </div>
+    <div class="comando">
+      <strong>!bot</strong>
+      <div class="descricao">Versão atual do bot (pq alguém quer saber isso? 🤔)</div>
+    </div>
+    <div class="comando">
+        <strong>!perfil</strong>
+        <div class="alias">Sinônimo: !profile</div>
+        <div class="uso">!perfil @fulano | !perfil</div>
+        <div class="descricao">Exibe seu perfil no canal ou de alguém</div>
+      </div>
+    <div class="comando">
+        <strong>!rank</strong>
+        <div class="alias">Sinônimo: !ranking</div>
+        <div class="uso">!rank categoria | !rank categoria @fulano | xp, moedas, watch_time, diamantes</div>
+        <div class="descricao">Exibe o top 10 do rank da categoria ou a posição de alguém na categoria</div>
+      </div>
+    <div class="comando">
+        <strong>!aposta</strong>
+        <div class="uso">!aposta @fulano quantidade</div>
+        <div class="descricao">Jogue cara ou coroa apostando moedas</div>
+      </div>
+    <div class="comando">
+        <strong>!sr</strong>
+        <div class="alias">Sinônimo: !songrequest</div>
+        <div class="uso">!sr música - artista(opicional) | !sr link do spotify</div>
+        <div class="descricao">Coloca uma música do spotify na fila</div>
+      </div>
+    <div class="comando">
+        <strong>!song</strong>
+        <div class="alias">Sinônimos: !current, !atual</div>
+        <div class="descricao">Exibe o nome da música atual</div>
+      </div>
+  </div>
+
+  <div class="content conteudo2">
+    <div class="comando">
+      <strong>!acabou</strong>
+      <div class="alias">É TETRA!!!!!!! 🏆🏆🏆</div>
+      <div class="descricao">$20</div>
+    </div>
+    <div class="comando">
+      <strong>!autismo</strong>
+      <div class="alias">Com todo respeito! 🖖</div>
+      <div class="descricao">$30</div>
+    </div>
+    <div class="comando">
+        <strong>!awp</strong>
+        <div class="alias">Alvo Eliminado! 💥</div>
+        <div class="descricao">$15</div>
+      </div>
+      <div class="comando">
+        <strong>!buscape</strong>
+        <div class="alias">Segura o apito!!! 🎇</div>
+        <div class="descricao">$20</div>
+      </div>
+      <div class="comando">
+        <strong>!buzina</strong>
+        <div class="alias">Ó a entrega da raposa!!! 🚚</div>
+        <div class="descricao">$60</div>
+      </div>
+      <div class="comando">
+        <strong>!caixao</strong>
+        <div class="alias">Foi de Vasco! ⚰️</div>
+        <div class="descricao">$80</div>
+      </div>
+      <div class="comando">
+        <strong>!calma</strong>
+        <div class="alias">Fica na linha aí! ✋</div>
+        <div class="descricao">$15</div>
+      </div>
+      <div class="comando">
+        <strong>!corsa</strong>
+        <div class="alias">Cala a boca e escuta o som aí 🚗</div>
+        <div class="descricao">$100</div>
+      </div>
+      <div class="comando">
+        <strong>!corsafake</strong>
+        <div class="alias">Achei que era o corsa...</div>
+        <div class="descricao">$30</div>
+      </div>
+      <div class="comando">
+        <strong>!cremoso</strong>
+        <div class="alias">Toma milkshake de morango? 🥤</div>
+        <div class="descricao">$30</div>
+      </div>
+      <div class="comando">
+        <strong>!errou</strong>
+        <div class="alias">Tá é vesgo é?</div>
+        <div class="descricao">$5</div>
+      </div>
+      <div class="comando">
+        <strong>!gyro</strong>
+        <div class="alias">Foi quando Gyro finalmente entendeu... 😢</div>
+        <div class="descricao">$100</div>
+      </div>
+      <div class="comando">
+        <strong>!loteria</strong>
+        <div class="alias">LOTERIA!!!</div>
+        <div class="descricao">$40</div>
+      </div>
+      <div class="comando">
+        <strong>!mickey</strong>
+        <div class="alias">Ai que diliça</div>
+        <div class="descricao">$15</div>
+      </div>
+      <div class="comando">
+        <strong>!nossa</strong>
+        <div class="alias">Nossa!</div>
+        <div class="descricao">$10</div>
+      </div>
+      <div class="comando">
+        <strong>!numcompensa</strong>
+        <div class="alias">Séloko, num compensa</div>
+        <div class="descricao">$20</div>
+      </div>
+      <div class="comando">
+        <strong>!oi</strong>
+        <div class="alias">Oi meu chapa</div>
+        <div class="descricao">$10</div>
+      </div>
+      <div class="comando">
+        <strong>!porta</strong>
+        <div class="alias">Toc Toc! 🚪</div>
+        <div class="descricao">$80</div>
+      </div>
+      <div class="comando">
+        <strong>!rapaz</strong>
+        <div class="alias">Rapaaiz... 🐀</div>
+        <div class="descricao">$10</div>
+      </div>
+      <div class="comando">
+        <strong>!rojao</strong>
+        <div class="alias">Quem fez gol?</div>
+        <div class="descricao">$20</div>
+      </div>
+      <div class="comando">
+        <strong>!s2</strong>
+        <div class="alias">Careless Whisper 💗</div>
+        <div class="descricao">$80</div>
+      </div>
+      <div class="comando">
+        <strong>!sus</strong>
+        <div class="alias">Há um impostor...</div>
+        <div class="descricao">$15</div>
+      </div>
+      <div class="comando">
+        <strong>!vaca</strong>
+        <div class="alias">Vala minha nossa senhora! 😱</div>
+        <div class="descricao">$15</div>
+      </div>
+      <div class="comando">
+        <strong>!yipee</strong>
+        <div class="alias">Yipeeeee</div>
+        <div class="descricao">$15</div>
+      </div>
+  </div>
+
+  <div class="content conteudo3">
+    <div class="comando">
+      <strong>!hab</strong>
+      <div class="uso">!hab on\off | !hab</div>
+      <div class="descricao">Altera ou exibe o status do songrequest</div>
+    </div>
+    <div class="comando">
+      <strong>!pause</strong>
+      <div class="alias">Sinônimos: !pausar, !pausa</div>
+      <div class="descricao">Para a música</div>
+    </div>
+    <div class="comando">
+        <strong>!play</strong>
+        <div class="alias">Sinônimos: !resume, !iniciar</div>
+        <div class="descricao">Toca a música</div>
+      </div>
+    <div class="comando">
+        <strong>!skip</strong>
+        <div class="alias">Sinônimo: !next</div>
+        <div class="descricao">Pula para a próxima música</div>
+      </div>
+      <div class="comando">
+        <strong>!volume</strong>
+        <div class="uso">!perfil número | !volume</div>
+        <div class="descricao">Altera ou exibe o volume atual</div>
+      </div>
+      <div class="comando">
+        <strong>!end</strong>
+        <div class="descricao">Força o OBS a fechar a live <strong>(só em caso de emergência)</strong></div>
+      </div>
+  </div>
+
+  <div class="content conteudo4">
+    <p>Marque @nixfrostfox no chat para conversar com ela quando o canal estiver ao vivo!</p>
+  </div>
+
+</body>
+</html>
